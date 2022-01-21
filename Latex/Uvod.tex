@@ -2,20 +2,17 @@
 \label{UVOD}
 \addcontentsline{toc}{chapter}{Úvod}
 
-%V úvode autor podrobnejšie ako v predhovore, pritom výstižne a krátko charakterizuje stav poznania alebo praxe v špecifickej oblasti, %ktorá je predmetom záverečnej práce. Autor presnejšie ako v predhovore vysvetlí ciele práce, jej zameranie, použité metódy a stručne %objasní vzťah práce k iným prácam podobného zamerania. V úvode netreba zachádzať hlbšie do teórie. Netreba podrobne opisovať metódy, %experimentálne výsledky, ani opakovať závery prípadne odporúčania.
-%Úvod začína na novej  strane.
+    Tento dokument popisuje tvorbu, kód a funkcie stránky s názvom "SF", podľa iniciálov klienta. Táto stránka bola vytvorená
+ako záverečný projekt k predmetu Databázy a internet. Stránka funguje ako akýsi online životopis kde si klient môže zadávať svoje pracovné texty, fotky, pdf súbory a iné.
 
-Cieľom tejto bakalárskej práce je návrh, výroba a naprogramovanie modernej učebnej pomôcky AeroShieldu (ďalej len „shield”), ktorý slúži na výuku základov teórie riadenia a elektrotechniky.
+Klient môže obsah stránky upravovať pomocou konta administrátora ktoré je zabezpečené pomocou mena a hesla. Ostatní užívatelia stránky si môžu jednotlivé podstránky iba prezerať. Administrátor má možnosť registrácie nových administrátorov, ktorý budú mať taktiež povolený prístup ku spraovaniu obsahu stránky. Strána vznikala priamo podľa požiadaviek klienta a boli do nej zapracované všetky žiadosti klienta.
 
-Učebné pomôcky sú nevyhnutnou, no často zanedbávanou súčasťou výuky. študenti si vďaka nim môžu lepšie predstaviť a pochopiť problematiku daného učiva. Kombinujú tak príjemne s užitočným, kedy sa Študent môže lepšie zoznámiť s hardwarom a systémom fungovania učebnej pomôcky.
-Avšak, takéto pomôcky bývajú častokrát príliš sofistikované a drahé \cite{Hor} z toho dôvodu, je ich použitie pri výučbe nepraktické .
+V dokumentácii je podrobne popísané fungovanie stránky a všetky jej aspekty. Stránka vznikla za účelom splnenia podmienok hodnotenia predmetu Databázy a internet a za tým účelom boli na fungovanie použité všetky programovacie jazyky ktoré sme sa počas semestra naučili a to menovite:
 
-Za cieľom sprístupnenia experimentálnych modulov širokej verejnosti prišli na ústave Automatizácie, merania a aplikovanej informatiky
-Strojníckej fakulty Slovenskej technickej univerzity v Bratislave s projektom AutomationShield, ktorý ponúka pomerne jednoduché a cenovo dostupné experimentálne moduly ako Open-source\footnote[1]{Open-source je zo všeobecného pohľadu akákoľvek informácia ktorá je dostupná verejnosti bez poplatku(s voľným prístupom), s ohľadom na fakt, že jej voľné šírenie zostane zachované.} študentské projekty.
-
-Vhodnou platformou na implementáciu týchto modulov sú napríklad prototypizačné dosky Arduino ktoré sú taktiež Open-source. Ich nízka cena a celosvetová popularita, spojená s obrovským množstvom návodov, informácii a pomôcok, vytvára ideálnu platformu pre začínajúcich, ako aj pokročilých, programátorov, elektrotechnikov alebo hobby nadšencov.
-
-V bakalárskej práci je opísaný postup výroby a fungovania shieldu s dôrazom na zrozumiteľnosť jednotlivých aspektov aj čitateľom, ktorý o danej téme nie sú dokonale oboznámený. Na začiatku bakalárskej práce, v hardwarovej časti, je opísaný základný princíp fungovania shieldu a následne jeho jednotlivé súčiastky. Pochopenie fungovania jednotlivých súčiastok shieldu je kritické pre správnu manipuláciu užívateľa s jeho jednotlivými časťami. Poslednú časť tvorí tvorba dosky plošných spojov pre shield v programe DipTrace.
-
-V softwarovej časti sú bližšie predstavené jednotlivé charakteristické funkcie shieldu. Funkcie sú usporiadané do logických celkov pre ľahšiu prácu užívateľa s kódom.
+\begin{itemize}
+\item HTML (HyperText Markup Language) - jazyk použitý na základnú obsahovú štruktúru stránky,
+\item PHP (PHP: Hypertext Preprocessor) - použitý na získavanie dynamických údajov zo stránky,
+\item SQL (Structured Query Language) - použitý na vytvorenie a komunikáciu s databázami na MySQL serveri,
+\item CSS (Cascading Style Sheets) - použitý na vizuálnu štrukturáciu stránky.
+\end{itemize}
 

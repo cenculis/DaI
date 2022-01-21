@@ -18,6 +18,10 @@
 \usepackage{indentfirst}
 
 
+
+
+
+
 %This custom command defines how the literal menus look like.
 \newcommand{\gui}[1]{{\emph{#1}}} %Gui commands, icon names, buttons
  % All code, functions, variables are typed like this
@@ -68,12 +72,6 @@ alsoletter={_}
 \begin{document}
 %%%%%%% Zaciaatok %%%%%%%%
 \input{Obalka}
-\input{Titul}
-\input{Zadanie}
-\input{Prehlasenie}
-\input{Podakovanie}
-\input{Abstrakt}
-\listoffigures
 %%%%%% \input{Predhovor} %%%%%%
 \tableofcontents
 \thispagestyle{empty}
@@ -86,16 +84,16 @@ alsoletter={_}
 
 
 \include{Uvod}
-\include{Motivácia}
-\include{AeroShield}
-\include{Didaktické príklady}
+\include{vizual stranky}
+\include{nextpage}
+\include{Funkcie stránky}
+\include{Fungovanie stránky}
 \include{Zaver}
 %\include{Kapitola1}
-%\include{Kapitola2}
 %[...]
 
 %%%%%%% Koniec %%%%%%%%
-\bibliographystyle{unsrt}
+\bibliographystyle{plain}
 \addcontentsline{toc}{chapter}{Literat\'{u}ra}
 \bibliography{bibliog}
 \end{document}
