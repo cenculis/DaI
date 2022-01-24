@@ -1,11 +1,11 @@
 \chapter{Fungovanie stránky}
 \section{Súbory tvoriace stránku}
 
-Všetky stránky a podstránky sú graficky ovládané pomocou 6. súborov .css ktoré sú logicky usporiadané podľa celkov kódu. Celá stránka sa skladá z 18. podstránok a 2 databáz.
+Všetky stránky a podstránky sú graficky ovládané pomocou 6 súborov .css ktoré sú logicky usporiadané podľa celkov kódu. Celá stránka sa skladá z 18 podstránok a 2 databáz.
 
 \subsection{domovská stránka}
 \vspace{0.5cm}
-\textbf{Začiatočná deklerácia stránky je na každej stránke rovnaká, ďalej ju teda nebudeme pripájať.}
+\textbf{Začiatočná deklarácia stránky je na každej stránke rovnaká, ďalej ju teda nebudeme pripájať.}
 \vspace{0.5cm}
 \begin{lstlisting}
 <!DOCTYPE HTML>
@@ -22,7 +22,7 @@ Všetky stránky a podstránky sú graficky ovládané pomocou 6. súborov .css 
 </head>
 \end{lstlisting}
 \vspace{0.5cm}
-\textbf{Kód headeru každej stránky je rovnaký, ďalej ho teda nebudeme pripájať. V headery sú určené buttony, ich prepojenia a taktiež úvodné logo ktoré slúži ako button.}
+\textbf{Kód headeru každej stránky je rovnaký, ďalej ho teda nebudeme pripájať. V headeri sú určené buttony, ich prepojenia a taktiež úvodné logo ktoré slúži ako button.}
 \vspace{0.5cm}
 \begin{lstlisting}
 <body>
@@ -72,7 +72,7 @@ Curabitur molestie...
 
 \end{lstlisting}
 \vspace{0.5cm}
-\textbf{Footer v ktorom sa nachádzajú linky na sociálne siete a email. }
+\textbf{Footer, v ktorom sa nachádzajú linky na sociálne siete a email. }
 \vspace{0.5cm}
 \begin{lstlisting}
 <hr style="height:2px;border-width:0;color: #FFD658 ;background-color: #FFD658">
@@ -199,7 +199,7 @@ image_popup.style.display = "none";}
 
 \subsection{portfólio}
 \vspace{0.5cm}
-\textbf{funkcia na zobrazenie pdf súboru v peknom, olemovanom okne.}
+\textbf{Funkcia na zobrazenie pdf súboru v peknom, olemovanom okne.}
 \vspace{0.5cm}
 \begin{lstlisting}
 <!-- Content left -->
@@ -213,9 +213,9 @@ image_popup.style.display = "none";}
 \end{lstlisting}
 
 \section{Tvorba databázy pre stránku}
-\subsection{Databáza pre prihlasovanie adminov}
+\subsection{databáza pre prihlasovanie adminov}
 \vspace{0.5cm}
-\textbf{Databáza pre ukladanie mien a hesiel adminov. Heslá sa v databáze zobrazujú ako zašifrované znaky.}
+\textbf{Databáza pre ukladanie mien a hesiel adminov. Heslá sa v databáze zobrazujú ako zašifrované znaky\ref{OBRAZOK 1.16}.}
 \vspace{0.5cm}
 \begin{lstlisting}
 CREATE TABLE `users` (
@@ -225,21 +225,29 @@ CREATE TABLE `users` (
   `created_at` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 \end{lstlisting}
- 
- 
-\subsection{Databáza pre potreby textov a fotografií}
-\vspace{0.5cm} 
+
+\begin{figure}[!tbh]
+\centering
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=\textwidth]{obr/tabprihlas.png}}
+\caption{Vzhľad databázy pre ukladanie mien a hesiel adminov}\label{OBRAZOK 1.16}
+\end{figure}
+
+
+\subsection{databáza pre potreby textov a fotografií\ref{OBRAZOK 1.17}}
+\vspace{0.5cm}
 \textbf{Databáza pre zaradovanie textov do kategórií.}
-\vspace{0.5cm} 
+\vspace{0.5cm}
 \begin{lstlisting}
  CREATE TABLE `categories` (
   `id` int(3) NOT NULL,
   `name` text NOT NULL
 ) ENGINE=InnoDB
 \end{lstlisting}
-  
-\vspace{0.5cm}  
-\textbf{Databáza pre uskladnenie a prácu s textamy.}
+
+\vspace{0.5cm}
+\textbf{Databáza pre uskladnenie a prácu s textami.}
 \vspace{0.5cm}
 \begin{lstlisting}
 CREATE TABLE `posts` (
@@ -250,7 +258,7 @@ CREATE TABLE `posts` (
   `date_posted` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 \end{lstlisting}
-  
+
 \vspace{0.5cm}
 \textbf{Databáza pre uskladnenie a prácu s fotografiami.}
 \vspace{0.5cm}
@@ -263,4 +271,12 @@ CREATE TABLE `images` (
   `uploaded_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 \end{lstlisting}
- 
+
+
+\begin{figure}[!tbh]
+\centering
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=\textwidth]{obr/tabblog.png}}
+\caption{Vzhľad databázi pre potreby textov a fotografií}\label{OBRAZOK 1.17}
+\end{figure}
