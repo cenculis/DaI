@@ -1,0 +1,329 @@
+@font-face {
+  font-family: 'NHaasGroteskTXPro-55Rg';
+  src: url('NHaasGroteskTXPro-55Rg.eot');
+  src: url('NHaasGroteskTXPro-55Rg.eot?#iefix') format('embedded-opentype'),
+       url('NHaasGroteskTXPro-55Rg.svg#NHaasGroteskTXPro-55Rg') format('svg'),
+       url('NHaasGroteskTXPro-55Rg.ttf') format('truetype'),
+       url('NHaasGroteskTXPro-55Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.hide{
+
+  visibility: hidden;
+}
+
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #FFF;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 80px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #FFF;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+p{
+
+   font-size:16px;
+    font-family: 'NHaasGroteskTXPro-55Rg';
+}
+
+    h1 {text-align: center;
+            font-size:60px;
+            padding: 16px 32px;
+ font-family: 'NHaasGroteskTXPro-55Rg';
+        }
+ 
+ .font{
+  font-family: 'NHaasGroteskTXPro-55Rg';
+ }
+   
+   .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.flex-parent {
+   padding: 16px 32px;
+  display: flex;
+}
+
+.jc-center {
+   padding: 16px 32px;
+  justify-content: center;
+}
+
+ .popis{
+ padding: 16px 200px;
+ }
+
+.content-left
+{
+
+ float: left;
+  max-height: 700px;
+  min-height: 400px;
+
+  position: relative;
+  left: 50px;
+  top: 250px;
+}
+
+.logo{
+width:8%
+}
+
+.center {
+  display: block;
+margin-left: auto;
+  margin-right: auto;
+
+}
+
+.content-center
+{
+
+ border-left: 4px solid;
+ border-right: 6px solid;
+ border-top: 3px solid;
+ border-bottom: 3px solid;
+ border-color: #FFD658;
+
+
+ float: left;
+  width: 60%;
+  max-height: 700px;
+  min-height: 400px;
+
+  position: relative;
+  left: 100px;
+  top: 50px;
+}
+
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 100px;
+ font-size:15px;
+}
+
+
+
+.button10 {
+/*  border: none;  */
+/*  color: white;   */
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+/*  display: inline-block; */
+  font-size: 16px;
+  margin: 10px 10px;
+  transition-duration: 0.4s;
+  cursor: default;
+  width: 100px;
+ font-size:15px;
+  background-color: #F6F5F5;
+  color: #F6F5F5;
+}
+
+.pointer {
+ cursor: default;
+}
+
+.button2 {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 130px;
+ font-size:15px;
+}
+
+
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #FFD658;
+}
+
+.button1:hover {
+  background-color: #FFD658;
+  color: white;
+}
+
+.button1hover {
+  background-color: #FFD658;
+  color: white;
+}
+
+
+.column {
+width: 20.00%;
+font-size:12px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* CONTENT */
+.content {
+  margin: 5px auto;
+  border-radius: 5px;
+  min-height: 400px;
+}
+.content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.content .content-title {
+  margin: 10px 0px;
+  color: #374447;
+  font-family: 'Averia Serif Libre', cursive;
+}
+.content .post {
+  width: 335px;
+  margin: 9px;
+  min-height: 320px;
+  float: left;
+  border-radius: 2px;
+  border: 1px solid #b3b3b3;
+  position: relative;
+}
+.content .post .category {
+  margin-top: 0px;
+  padding: 3px 8px;
+  color: #374447;
+  background: white;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #374447;
+  box-shadow: 3px 2px 2px;
+  position: absolute;
+  left: 5px; top: 5px;
+  z-index: 3;
+}
+.content .post .category:hover {
+  box-shadow: 3px 2px 2px;
+  color: white;
+  background: #374447;
+  transition: .4s;
+  opacity: 1;
+}
+.content .post .post_image {
+  height: 260px;
+  width: 100%;
+  background-size: 100%;
+}
+.content .post .post_image {
+  width: 100%;
+  height: 260px;
+}
+.content .post .post_info {
+  height: 100%;
+  padding: 0px 5px;
+  font-weight: 200;
+    font-family: 'Noto Serif', serif;
+}
+.content .post .post_info {
+  color: #222;
+}
+.content .post .post_info span {
+  color: #A6A6A6;
+  font-style: italic;
+}
+.content .post .post_info span.read_more {
+  position: absolute;
+  right: 5px; bottom: 5px;
+}
+
+/* -----------------------Galeria -------------------------*/
+
