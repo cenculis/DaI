@@ -6,28 +6,14 @@ $posts = (isset($_GET['id'])) ? get_posts($_GET['id']) : get_posts();
 <!DOCTYPE html>
 <head>
 
-   <!--- Basic Page Needs
-   ================================================== -->
 	<meta http-equiv="Content-Type" content="Stranka slavky fratricovej" charset="UTF-8">
 	<meta name="Author" content="Peter Tibensky, STU"> 
 	<meta http-equiv="content-language" content="sk">
-
-	<!-- mobile specific metas
-   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- CSS
-    ================================================== -->
    <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">  
 	<link rel="stylesheet" href="css/media-queries.css"> 
-
-   <!-- Script
-   ================================================== -->
 	<script src="js/modernizr.js"></script>
-
-   <!-- Favicons
-	================================================== -->
 	<link rel="shortcut icon" href="favicon.png" >
 
 	<script type="text/javascript">
@@ -79,22 +65,20 @@ return confirm("Are you sure you want to delete this record?");
      }
      ?>
 
-				</article> <!-- end entry -->
+				</article> 
 
-   		</div> <!-- end main -->
+   		</div> 
    			
-   		</div> <!-- end sidebar -->
+   		</div> 
 
-   	</div> <!-- end row -->
+   	</div> 
 
-   </div> <!-- end content-wrap -->
+   </div> 
    
      <button type='button' value='Add Category' /><a href="index.php" class="upload-image">Home</a></button>
    <button type='button' value='Add Category' /><a href="hVe@7hL[8mk'x}=.php" class="upload-image">Admin</a></button>
 
 
-   <!-- Java Script
-   ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  

@@ -5,33 +5,31 @@ include_once('resources/init.php');
 
 <head>
 
-   <!--- Basic Page Needs
-   ================================================== -->
   	<meta http-equiv="Content-Type" content="Stranka slavky fratricovej" charset="UTF-8">
 	<meta name="Author" content="Peter Tibensky, STU"> 
 	<meta http-equiv="content-language" content="sk">
-
-	<!-- mobile specific metas
-   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- CSS
-    ================================================== -->
    <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">  
 	<link rel="stylesheet" href="css/media-queries.css"> 
-
-   <!-- Script
-   ================================================== -->
 	<script src="js/modernizr.js"></script>
-
-   <!-- Favicons
-	================================================== -->
 	<link rel="shortcut icon" href="favicon.png" >
 
 </head>
 
 <body>
+
+
+<?php
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.php');
+	exit;
+}
+?>
+
+
 
 
    <!-- Content
@@ -46,9 +44,8 @@ include_once('resources/init.php');
 					<header class="entry-header">
 	
 						<h2 class="entry-title">
-							<h2></h2>
-						</h2> 				 
-					
+							<h2>Welcome back, <?=$_SESSION['username']?>!</h2>				 
+					</h2>
 						<div class="entry-meta">
 		<button type='button' value='Add Category' /><a href="upload.php" class="upload-image">Upload Image</a></button>
 		<button type='button' value='Add Category' /><a href="add_post.php">Add Post</a></button>
@@ -72,9 +69,8 @@ include_once('resources/init.php');
 
 <?php
 include 'functions.php';
-// Connect to MySQL
+
 $pdo = pdo_connect_mysql();
-// MySQL query that selects all the images
 $stmt = $pdo->query('SELECT * FROM images ORDER BY uploaded_date DESC');
 $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -116,22 +112,20 @@ $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="image-popup"></div>
 
 <script>
-// Container we'll use to output the image
+
 let image_popup = document.querySelector('.image-popup');
-// Iterate the images and apply the onclick event to each individual image
 document.querySelectorAll('.images a').forEach(img_link => {
 	img_link.onclick = e => {
 		e.preventDefault();
 		let img_meta = img_link.querySelector('img');
 		let img = new Image();
 		img.onload = () => {
-			// Create the pop out image
 			image_popup.innerHTML = `
 				<div class="con">
 					<h3>${img_meta.dataset.title}</h3>
 					<p>${img_meta.alt}</p>
 					<img src="${img.src}" width="500px" height="500px">
-					<a href="delete.php?id=${img_meta.dataset.id}" class="trash" title="Delete Image"><i class="fas fa-trash fa-xs"></i></a>
+					<a href="delete.php?id=${img_meta.dataset.id}" class="trash" title="Delete Image">del img<i class="fas fa-trash fa-xs"></i></a>
 				</div>
 			`;
 			image_popup.style.display = 'flex';
@@ -139,7 +133,6 @@ document.querySelectorAll('.images a').forEach(img_link => {
 		img.src = img_meta.src;
 	};
 });
-// Hide the image popup container, but only if the user clicks outside the image
 image_popup.onclick = e => {
 	if (e.target.className == 'image-popup') {
 		image_popup.style.display = "none";
@@ -153,28 +146,19 @@ image_popup.onclick = e => {
 					</div> 
 
 
-				</article> <!-- end entry -->
+				</article> 
 
-   		</div> <!-- end main -->
+   		</div>
 
 				
    			
-   		</div> <!-- end sidebar -->
+   		</div> 
 
-   	</div> <!-- end row -->
+   	</div> 
 
-   </div> <!-- end content-wrap -->
-
-
+   </div>
 
 
-
-   
-  
-
-
-   <!-- Java Script
-   ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  

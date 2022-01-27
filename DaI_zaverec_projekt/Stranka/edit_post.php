@@ -34,37 +34,20 @@ if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
 
 <head>
 
-   <!--- Basic Page Needs
-   ================================================== -->
    <meta http-equiv="Content-Type" content="Stranka slavky fratricovej" charset="UTF-8">
    <meta name="Author" content="Peter Tibensky, STU"> 
    <meta http-equiv="content-language" content="sk">
-
-	<!-- mobile specific metas
-   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- CSS
-    ================================================== -->
    <link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/layout.css">  
 	<link rel="stylesheet" href="css/media-queries.css"> 
-
-   <!-- Script
-   ================================================== -->
 	<script src="js/modernizr.js"></script>
-
-   <!-- Favicons
-	================================================== -->
 	<link rel="shortcut icon" href="favicon.png" >
 
 </head>
 
 <body>
 
-
-   <!-- Content
-   ================================================== -->
    <div id="content-wrap">
 
    	<div class="row">
@@ -112,19 +95,15 @@ if(isset($_POST['title'],$_POST['contents'],$_POST['category'])){
 					</header>  
 
 
-				</article> <!-- end entry -->
+				</article>
 
-   		</div> <!-- end main -->
+   		</div>
 
-   	</div> <!-- end row -->
+   	</div> 
 
-   </div> <!-- end content-wrap -->
+   </div> 
    
 
-
-
-   <!-- Java Script
-   ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>  

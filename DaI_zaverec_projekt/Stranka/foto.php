@@ -1,8 +1,6 @@
 <?php
 include 'functions.php';
-// Connect to MySQL
 $pdo = pdo_connect_mysql();
-// MySQL query that selects all the images
 $stmt = $pdo->query('SELECT * FROM images ORDER BY uploaded_date DESC');
 $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -60,16 +58,13 @@ $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="image-popup"></div>
 
 <script>
-// Container we'll use to output the image
 let image_popup = document.querySelector('.image-popup');
-// Iterate the images and apply the onclick event to each individual image
 document.querySelectorAll('.images a').forEach(img_link => {
 	img_link.onclick = e => {
 		e.preventDefault();
 		let img_meta = img_link.querySelector('img');
 		let img = new Image();
 		img.onload = () => {
-			// Create the pop out image
 			image_popup.innerHTML = `
 				<div class="con">
 					<h3>${img_meta.dataset.title}</h3>
@@ -83,7 +78,6 @@ document.querySelectorAll('.images a').forEach(img_link => {
 		img.src = img_meta.src;
 	};
 });
-// Hide the image popup container, but only if the user clicks outside the image
 image_popup.onclick = e => {
 	if (e.target.className == 'image-popup') {
 		image_popup.style.display = "none";
